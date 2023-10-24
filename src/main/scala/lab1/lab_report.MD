@@ -9,13 +9,7 @@ Date of create: 23.10.2023\
 Date of finished: dd.mm.2023
 ## Лабораторная работа №1 "Установка Docker и Minikube, мой первый манифест."
 
-Для разворачивания сервиса Vault был создан namespace ```vault```:
-
-```bash 
-kubectl apply -f namespace.yml
-```
-
-Далее был создан pod для Vault с единственным портом ```8200```:
+Был создан pod для Vault с единственным портом ```8200```:
 
 ```bash 
 kubectl apply -f pod.yml
