@@ -6,7 +6,7 @@ Group: K4113C\
 Author: Semisalov Daniil Vladimirovich\
 Lab: Lab 1\
 Date of create: 23.10.2023\
-Date of finished: dd.mm.2023
+Date of finished: 26.10.2023
 ## Лабораторная работа №1 "Установка Docker и Minikube, мой первый манифест."
 
 Был создан pod для Vault с единственным портом ```8200```:
