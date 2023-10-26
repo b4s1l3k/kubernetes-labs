@@ -6,7 +6,7 @@ Group: K4113C\
 Author: Semisalov Daniil Vladimirovich\
 Lab: Lab 2\
 Date of create: 24.10.2023\
-Date of finished: dd.mm.2023
+Date of finished: 16.10.2023
 ## Лабораторная работа №2 "Развертывание веб сервиса в Minikube, доступ к веб интерфейсу сервиса. Мониторинг сервиса."
 
 Был создан Deployment и Service (LoadBalancer) с единственным портом ```3000```:
