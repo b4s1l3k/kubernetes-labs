@@ -15,6 +15,7 @@ Date of finished: dd.mm.yyyy
 ## Ход работы
 ### 1. Cоздание configMap с переменными: REACT_APP_USERNAME, REACT_APP_COMPANY_NAME
 Переменные REACT_APP_USERNAME, REACT_APP_COMPANY_NAME передаются в Deployment
+
 Создаем `ConfigMap` с переменными `REACT_APP_USERNAME` и `REACT_APP_COMPANY_NAME`
 
 ```yml
@@ -140,7 +141,7 @@ stringData:
     -----END PRIVATE KEY-----
 ```
 
-### 6. Запуск написанного файла содержащего
+### 6. Запуск деплоймента
 Для применения всего написанного в манифесте выполним команду:
 ```
 kubectl apply -f deployment.yaml
