@@ -152,7 +152,7 @@ kubectl apply -f deployment.yaml
 
 ### 6. Перейдем в браузер
 Для начала необходимо добавить запись в файл `hosts`, чтобы связать ip-адрес и доменное имя:
-![hosts](/pic/pic4)
+![hosts](/pic/pic4.png)
 
 Подключаемся к Ingress командой с помощью команды:
 ```
@@ -161,13 +161,13 @@ minikube tunnel
 
 Открываем страницу с адресом  `https://danya1234.com/`
 
-![open_site](/pic/pic1)
+![open_site](/pic/pic1.png)
 
 ### 7. Проверка наличия сертификата
 Ниже представленны данные сертификата:
 
-![view_certificate](/pic/pic2)
+![view_certificate](/pic/pic2.png)
 
 ## Схема
 
-![scheme](/pic/)
+![scheme](/pic/pic5.png)
