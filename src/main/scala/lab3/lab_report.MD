@@ -139,10 +139,6 @@ stringData:
 
     -----END PRIVATE KEY-----
 ```
-Так же нужно написать 
-```
-kubectl create secret tls daniil-lab3-tls --key="cert.key" --cert="cert.crt"
-```
 
 ### 6. Запуск написанного файла содержащего
 Для применения всего написанного в манифесте выполним команду:
