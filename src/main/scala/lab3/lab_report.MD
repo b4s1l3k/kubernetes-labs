@@ -86,7 +86,7 @@ openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out cert.crt -
 
 Далее создаем секрет, добавляя сертификат в `minikube` с помощью команды:
 ```
-kubectl create secret tls valeria-lab3-tls --key="cert.key" --cert="cert.crt"
+kubectl create secret tls daniil-lab3-tls --key="cert.key" --cert="cert.crt"
 ```
 
 ### 4. Создание Ingress
