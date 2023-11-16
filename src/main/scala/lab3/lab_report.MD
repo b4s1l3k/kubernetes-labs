@@ -82,7 +82,7 @@ spec:
 openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out cert.crt -keyout cert.key
 ```
 
-![certificate](/pic/pic3)
+![certificate](pic/pic3.png)
 
 Далее создаем секрет, добавляя сертификат в `minikube` с помощью команды:
 ```
@@ -152,7 +152,7 @@ kubectl apply -f deployment.yaml
 
 ### 6. Перейдем в браузер
 Для начала необходимо добавить запись в файл `hosts`, чтобы связать ip-адрес и доменное имя:
-![hosts](/pic/pic4.png)
+![hosts](pic/pic4.png)
 
 Подключаемся к Ingress командой с помощью команды:
 ```
@@ -161,13 +161,13 @@ minikube tunnel
 
 Открываем страницу с адресом  `https://danya1234.com/`
 
-![open_site](/pic/pic1.png)
+![open_site](pic/pic1.png)
 
 ### 7. Проверка наличия сертификата
 Ниже представленны данные сертификата:
 
-![view_certificate](/pic/pic2.png)
+![view_certificate](pic/pic2.png)
 
 ## Схема
 
-![scheme](/pic/pic5.png)
+![scheme](pic/pic5.png)
