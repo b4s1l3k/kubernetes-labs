@@ -1,0 +1,85 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lab3
+  labels:
+    app: lab3
+data:
+  react_app_username: "Semisalov Daniil"
+  react_app_company_name: "ITMO"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lab3
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: lab3
+  template:
+    metadata:
+      labels:
+        app: lab3
+    spec:
+      containers:
+        - name: itdt-contained-frontend
+          image: ifilyaninitmo/itdt-contained-frontend:master
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: lab3
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lab3-service
+  labels:
+    app: lab3
+spec:
+  selector:
+    app: lab3
+  ports:
+    - protocol: TCP
+      port: 8200
+      targetPort: 3000
+  type: LoadBalancer
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  labels:
+    app: lab3
+spec:
+  tls:
+    - hosts:
+        - danya1234.com
+      secretName: app-tls
+  rules:
+    - host: danya1234.com
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: lab3-service
+                port:
+                  number: 8200
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: lab3-tls
+type: kubernetes.io/tls
+stringData:
+  tls.crt: |
+    -----BEGIN CERTIFICATE-----
+    
+    -----END CERTIFICATE-----
+  tls.key: |
+    -----BEGIN PRIVATE KEY-----
+    
+    -----END PRIVATE KEY-----
