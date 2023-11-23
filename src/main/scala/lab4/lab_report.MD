@@ -5,7 +5,7 @@ Course: [Introduction to distributed technologies](https://github.com/itmo-ict-f
 Year: 2023/2024  
 Group: K4113c  
 Author: Semisalov Daniil 
-Lab: Lab3  
+Lab: Lab4  
 Date of create: 23.11.2023  
 Date of finished: dd.mm.yyyy
 ---
